@@ -125,9 +125,7 @@
     "category": "cosmetic",
     "price": 48,
     "images": [
-      "https://images.unsplash.com/photo-1586495777744-4e6232bf2ebb?w=800&q=80",
-      "https://images.unsplash.com/photo-1631214524020-3c69b8b42ef1?w=800&q=80",
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80"
+      "/velvet_rose_lip_elixir.png"
     ],
     "description": "A luxurious tinted lip treatment that blends sheer rose pigment with hyaluronic acid and rosehip oil. Delivers colour and lasting nourishment in a single stroke.",
     "scentNotes": [],
@@ -155,9 +153,7 @@
     "category": "cosmetic",
     "price": 65,
     "images": [
-      "https://images.unsplash.com/photo-1631214524020-3c69b8b42ef1?w=800&q=80",
-      "https://images.unsplash.com/photo-1586495777744-4e6232bf2ebb?w=800&q=80",
-      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&q=80"
+      "/nude_velvet_foundation.png"
     ],
     "description": "Buildable medium-to-full coverage with a skin-like velvet finish. Infused with hyaluronic acid for 16-hour hydration and a flawless, luminous complexion.",
     "scentNotes": [],
@@ -185,9 +181,7 @@
     "category": "cosmetic",
     "price": 38,
     "images": [
-      "https://images.unsplash.com/photo-1586495777744-4e6232bf2ebb?w=800&q=80",
-      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&q=80",
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80"
+      "/midnight_lash_mascara.png"
     ],
     "description": "Volumising, lengthening, and conditioning in one. The precision-curved brush deposits deep black pigment from root to tip, while provitamin B5 nourishes lashes overnight.",
     "scentNotes": [],
@@ -200,9 +194,7 @@
     "category": "cosmetic",
     "price": 85,
     "images": [
-      "https://images.unsplash.com/photo-1631214524020-3c69b8b42ef1?w=800&q=80",
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80",
-      "https://images.unsplash.com/photo-1586495777744-4e6232bf2ebb?w=800&q=80"
+      "/golden_hour_palette.png"
     ],
     "description": "Eight editorial eye shades — from champagne satin to smoked mahogany — inspired by the hour when daylight turns to gold. Intensely pigmented, crease-resistant.",
     "scentNotes": [],
