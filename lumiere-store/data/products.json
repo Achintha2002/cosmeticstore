@@ -1,0 +1,227 @@
+[
+  {
+    "id": "perf-001",
+    "name": "Velvet Oud",
+    "category": "perfume",
+    "price": 189,
+    "images": [
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80",
+      "https://images.unsplash.com/photo-1594913788267-e3a62a7fee87?w=800&q=80",
+      "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=800&q=80"
+    ],
+    "description": "A deep, resinous oriental fragrance anchored by smoky oud, dark rose, and warm amber. An evening fragrance that leaves a trail of sophisticated mystery.",
+    "scentNotes": ["Oud", "Dark Rose", "Amber", "Sandalwood", "Musk"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Oud Extract", "Rosa Damascena Oil", "Ambroxan", "Santalum Album Oil"],
+    "inStock": true
+  },
+  {
+    "id": "perf-002",
+    "name": "Blanc Iris",
+    "category": "perfume",
+    "price": 145,
+    "images": [
+      "https://images.unsplash.com/photo-1616949970965-96b48b38c4cb?w=800&q=80",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80",
+      "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=800&q=80"
+    ],
+    "description": "A powdery floral built around Florentine iris root, white peony, and a gossamer musk. Clean, ethereal, and timeless.",
+    "scentNotes": ["Iris Root", "White Peony", "Cashmere Musk", "Bergamot", "White Cedar"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Iris Pallida Root Extract", "Paeonia Officinalis Flower Oil", "Cedrus Atlantica Bark Oil"],
+    "inStock": true
+  },
+  {
+    "id": "perf-003",
+    "name": "Rose Noire",
+    "category": "perfume",
+    "price": 210,
+    "images": [
+      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800&q=80",
+      "https://images.unsplash.com/photo-1594913788267-e3a62a7fee87?w=800&q=80",
+      "https://images.unsplash.com/photo-1616949970965-96b48b38c4cb?w=800&q=80"
+    ],
+    "description": "Bold and seductive, this black rose fragrance intertwines Turkish rose absolute with dark patchouli and vetiver. A fragrance for the unapologetically confident.",
+    "scentNotes": ["Turkish Rose Absolute", "Black Patchouli", "Vetiver", "Dark Plum", "Leather"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Rosa Damascena Flower Extract", "Pogostemon Cablin Leaf Oil", "Vetiveria Zizanoides Root Oil"],
+    "inStock": true
+  },
+  {
+    "id": "perf-004",
+    "name": "Santal Lumière",
+    "category": "perfume",
+    "price": 165,
+    "images": [
+      "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=800&q=80",
+      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800&q=80",
+      "https://images.unsplash.com/photo-1594913788267-e3a62a7fee87?w=800&q=80"
+    ],
+    "description": "Creamy Mysore sandalwood warmed by vanilla bourbon and a hint of smoked cardamom. The quintessential comfort fragrance — enveloping and serene.",
+    "scentNotes": ["Mysore Sandalwood", "Vanilla Bourbon", "Cardamom", "Tonka Bean", "Cedarwood"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Santalum Album Wood Oil", "Vanilla Planifolia Fruit Extract", "Elettaria Cardamomum Seed Oil"],
+    "inStock": true
+  },
+  {
+    "id": "perf-005",
+    "name": "Aqua Neroli",
+    "category": "perfume",
+    "price": 125,
+    "images": [
+      "https://images.unsplash.com/photo-1594913788267-e3a62a7fee87?w=800&q=80",
+      "https://images.unsplash.com/photo-1616949970965-96b48b38c4cb?w=800&q=80",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80"
+    ],
+    "description": "Sun-drenched citrus meets the delicate blossom of neroli in this effortlessly fresh Mediterranean fragrance. Light, radiant, and uplifting for any occasion.",
+    "scentNotes": ["Neroli", "Sicilian Bergamot", "White Tea", "Sea Salt", "Ambergris"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Citrus Aurantium Amara Flower Oil", "Citrus Bergamia Peel Oil", "Camellia Sinensis Leaf Extract"],
+    "inStock": true
+  },
+  {
+    "id": "perf-006",
+    "name": "Mystère Boisé",
+    "category": "perfume",
+    "price": 175,
+    "images": [
+      "https://images.unsplash.com/photo-1616949970965-96b48b38c4cb?w=800&q=80",
+      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800&q=80",
+      "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=800&q=80"
+    ],
+    "description": "An enigmatic woody chypre with moss-covered forest floor, labdanum resin, and a surprising flicker of smoked incense. Deeply complex and long-lasting.",
+    "scentNotes": ["Oakmoss", "Labdanum", "Incense", "Grey Amber", "Violet Leaf"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Evernia Prunastri Extract", "Cistus Ladanifer Resin", "Boswellia Sacra Oil", "Viola Odorata Leaf Extract"],
+    "inStock": false
+  },
+  {
+    "id": "perf-007",
+    "name": "Fleur de Cassis",
+    "category": "perfume",
+    "price": 138,
+    "images": [
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80",
+      "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=800&q=80",
+      "https://images.unsplash.com/photo-1616949970965-96b48b38c4cb?w=800&q=80"
+    ],
+    "description": "Blackcurrant buds and magnolia petals over a luminous white musk base. A modern floral that is both playful and refined.",
+    "scentNotes": ["Blackcurrant Bud", "Magnolia", "White Musk", "Lychee", "Jasmine"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Ribes Nigrum Bud Extract", "Michelia Alba Flower Oil", "Jasminum Officinale Flower Oil"],
+    "inStock": true
+  },
+  {
+    "id": "perf-008",
+    "name": "Amber Soleil",
+    "category": "perfume",
+    "price": 158,
+    "images": [
+      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800&q=80",
+      "https://images.unsplash.com/photo-1594913788267-e3a62a7fee87?w=800&q=80",
+      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80"
+    ],
+    "description": "Golden amber fused with sun-warmed skin, benzoin, and a whisper of orange blossom. Radiant, sensual, and utterly irresistible.",
+    "scentNotes": ["Amber", "Benzoin", "Orange Blossom", "Vanilla", "Heliotrope"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Ambergris Tincture", "Styrax Benzoin Gum", "Citrus Aurantium Amara Flower Oil"],
+    "inStock": true
+  },
+  {
+    "id": "cosm-001",
+    "name": "Velvet Rose Lip Elixir",
+    "category": "cosmetic",
+    "price": 48,
+    "images": [
+      "https://images.unsplash.com/photo-1586495777744-4e6232bf2ebb?w=800&q=80",
+      "https://images.unsplash.com/photo-1631214524020-3c69b8b42ef1?w=800&q=80",
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80"
+    ],
+    "description": "A luxurious tinted lip treatment that blends sheer rose pigment with hyaluronic acid and rosehip oil. Delivers colour and lasting nourishment in a single stroke.",
+    "scentNotes": [],
+    "ingredients": ["Castor Oil", "Shea Butter", "Hyaluronic Acid", "Rosa Canina Fruit Oil", "Vitamin E", "Carmine", "Beeswax"],
+    "inStock": true
+  },
+  {
+    "id": "cosm-002",
+    "name": "Lumière Éclat Serum",
+    "category": "cosmetic",
+    "price": 98,
+    "images": [
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&q=80",
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80",
+      "https://images.unsplash.com/photo-1631214524020-3c69b8b42ef1?w=800&q=80"
+    ],
+    "description": "A concentrated brightening serum with 15% Vitamin C, niacinamide, and ferulic acid. Visibly evens skin tone and restores radiance within four weeks.",
+    "scentNotes": [],
+    "ingredients": ["Aqua", "Ascorbic Acid (15%)", "Niacinamide", "Ferulic Acid", "Hyaluronic Acid", "Glycerin", "Panthenol"],
+    "inStock": true
+  },
+  {
+    "id": "cosm-003",
+    "name": "Nude Velvet Foundation",
+    "category": "cosmetic",
+    "price": 65,
+    "images": [
+      "https://images.unsplash.com/photo-1631214524020-3c69b8b42ef1?w=800&q=80",
+      "https://images.unsplash.com/photo-1586495777744-4e6232bf2ebb?w=800&q=80",
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&q=80"
+    ],
+    "description": "Buildable medium-to-full coverage with a skin-like velvet finish. Infused with hyaluronic acid for 16-hour hydration and a flawless, luminous complexion.",
+    "scentNotes": [],
+    "ingredients": ["Aqua", "Dimethicone", "Titanium Dioxide", "Hyaluronic Acid", "Niacinamide", "Iron Oxides", "Glycerin", "Phenoxyethanol"],
+    "inStock": true
+  },
+  {
+    "id": "cosm-004",
+    "name": "Rosé Glow Blush Palette",
+    "category": "cosmetic",
+    "price": 72,
+    "images": [
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80",
+      "https://images.unsplash.com/photo-1631214524020-3c69b8b42ef1?w=800&q=80",
+      "https://images.unsplash.com/photo-1586495777744-4e6232bf2ebb?w=800&q=80"
+    ],
+    "description": "Five rose-toned blush and highlight shades ranging from barely-there nude to deep coral. Silky-milled formula glides on and blends effortlessly for a garden-fresh flush.",
+    "scentNotes": [],
+    "ingredients": ["Mica", "Talc", "Dimethicone", "Magnesium Stearate", "Iron Oxides", "Carmine", "Jojoba Oil"],
+    "inStock": true
+  },
+  {
+    "id": "cosm-005",
+    "name": "Midnight Lash Mascara",
+    "category": "cosmetic",
+    "price": 38,
+    "images": [
+      "https://images.unsplash.com/photo-1586495777744-4e6232bf2ebb?w=800&q=80",
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&q=80",
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80"
+    ],
+    "description": "Volumising, lengthening, and conditioning in one. The precision-curved brush deposits deep black pigment from root to tip, while provitamin B5 nourishes lashes overnight.",
+    "scentNotes": [],
+    "ingredients": ["Aqua", "Black Iron Oxide", "Panthenol (Provitamin B5)", "Carnauba Wax", "Beeswax", "Shellac", "Glycerin"],
+    "inStock": true
+  },
+  {
+    "id": "cosm-006",
+    "name": "Golden Hour Eye Palette",
+    "category": "cosmetic",
+    "price": 85,
+    "images": [
+      "https://images.unsplash.com/photo-1631214524020-3c69b8b42ef1?w=800&q=80",
+      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800&q=80",
+      "https://images.unsplash.com/photo-1586495777744-4e6232bf2ebb?w=800&q=80"
+    ],
+    "description": "Eight editorial eye shades — from champagne satin to smoked mahogany — inspired by the hour when daylight turns to gold. Intensely pigmented, crease-resistant.",
+    "scentNotes": [],
+    "ingredients": ["Mica", "Talc", "Dimethicone", "Iron Oxides", "Bismuth Oxychloride", "Argan Oil", "Tocopherol"],
+    "inStock": false
+  },
+  {
+    "id": "cosm-007",
+    "name": "Satin Skin Hydra-Mist",
+    "category": "cosmetic",
+    "price": 42,
+    "images": [
+      "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&q=80",
+      "https://images.unsplash.com/photo-1586495777744-4e6232bf2ebb?w=800&q=80",
+      "https://images.unsplash.com/photo-1631214524020-3c69b8b42ef1?w=800&q=80"
+    ],
+    "description": "A weightless hydrating mist packed with rose water, aloe vera, and glycerin. Instantly quenches dehydrated skin mid-day and sets makeup for a dewy, fresh finish.",
+    "scentNotes": [],
+    "ingredients": ["Aqua", "Rosa Damascena Flower Water", "Aloe Barbadensis Leaf Juice", "Glycerin", "Sodium Hyaluronate", "Panthenol"],
+    "inStock": true
+  }
+]

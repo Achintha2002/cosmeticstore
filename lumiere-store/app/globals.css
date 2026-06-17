@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+/* ─── LUMIÈRE Design Tokens (Tailwind v4 @theme) ─── */
+@theme inline {
+  /* Colors */
+  --color-background: #FAF9F6;
+  --color-surface: #F0EDE8;
+  --color-surface-alt: #E8E4DE;
+  --color-charcoal: #1C1C1E;
+  --color-charcoal-muted: #4A4A4C;
+  --color-rose: #B76E79;
+  --color-rose-light: #D4939C;
+  --color-rose-dark: #9A5560;
+  --color-white: #FFFFFF;
+  --color-border: #E0DAD4;
+
+  /* Typography */
+  --font-display: var(--font-playfair);
+  --font-sans: var(--font-inter);
+
+  /* Spacing / Sizing */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0 2px 16px 0 rgba(28, 28, 30, 0.08);
+  --shadow-card-hover: 0 8px 32px 0 rgba(28, 28, 30, 0.16);
+  --shadow-glass: 0 4px 24px 0 rgba(28, 28, 30, 0.10);
+}
+
+/* ─── Base styles ─── */
+:root {
+  --background: #FAF9F6;
+  --foreground: #1C1C1E;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  min-height: 100dvh;
+  line-height: 1.6;
+}
+
+/* ─── Headings use Playfair Display ─── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), Georgia, serif;
+  line-height: 1.2;
+  color: #1C1C1E;
+}
+
+/* ─── Scroll bar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F0EDE8;
+}
+::-webkit-scrollbar-thumb {
+  background: #B76E79;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9A5560;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background-color: #B76E79;
+  color: #FAF9F6;
+}
+
+/* ─── Focus ring ─── */
+:focus-visible {
+  outline: 2px solid #B76E79;
+  outline-offset: 2px;
+}
+
+/* ─── Utilities ─── */
+.font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.text-gradient-rose {
+  background: linear-gradient(135deg, #B76E79 0%, #D4939C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(250, 249, 246, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(224, 218, 212, 0.6);
+}
+
+.card-shadow {
+  box-shadow: 0 2px 16px 0 rgba(28, 28, 30, 0.08);
+}
+
+.card-shadow-hover {
+  box-shadow: 0 8px 32px 0 rgba(28, 28, 30, 0.16);
+}
+
+/* ─── Keyframes ─── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
