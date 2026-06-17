@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProductsByCategory, getCategoryBySlug, sortProducts } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
+import SortSelect from "@/components/SortSelect";
 import type { Metadata } from "next";
 
 interface CategoryPageProps {
@@ -80,27 +81,7 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
           </p>
 
           {/* Sort selector */}
-          <form className="flex items-center gap-3" aria-label="Sort products">
-            <label htmlFor="sort-select" className="text-xs font-semibold tracking-wider uppercase text-[#4A4A4C]">
-              Sort
-            </label>
-            <select
-              id="sort-select"
-              name="sort"
-              defaultValue={validSort}
-              onChange={(e) => {
-                const url = new URL(window.location.href);
-                url.searchParams.set("sort", e.target.value);
-                window.location.href = url.toString();
-              }}
-              className="text-sm bg-white border border-[#E0DAD4] rounded-xl px-3 py-2 text-[#1C1C1E] focus:outline-none focus:ring-2 focus:ring-[#B76E79] cursor-pointer"
-              aria-label="Sort by"
-            >
-              {sortOptions.map((o) => (
-                <option key={o.value} value={o.value}>{o.label}</option>
-              ))}
-            </select>
-          </form>
+          <SortSelect defaultValue={validSort} options={sortOptions} />
         </div>
 
         {/* Scent family / skin type filter pills */}
