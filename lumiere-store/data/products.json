@@ -59,13 +59,7 @@
     "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Santalum Album Wood Oil", "Vanilla Planifolia Fruit Extract", "Elettaria Cardamomum Seed Oil"],
     "inStock": true
   },
-  {
-    "id": "perf-005",
-    "name": "Aqua Neroli",
-    "category": "perfume",
-    "price": 125,
-    "images": [
-      "https://images.unsplash.com/photo-1594913788267-e3a62a7fee87?w=800&q=80",
+
       "https://images.unsplash.com/photo-1616949970965-96b48b38c4cb?w=800&q=80",
       "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80"
     ],
