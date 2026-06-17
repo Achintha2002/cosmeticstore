@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useCallback, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import type { Product } from "@/lib/products";
 
@@ -14,48 +13,87 @@ const CARD_WIDTH = 280;
 const CARD_GAP = 20;
 
 export default function ProductCarousel({ products, heading }: ProductCarouselProps) {
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-  const constraintsRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  useEffect(() => {
-    setIsTouchDevice(window.matchMedia("(hover: none)").matches);
-  }, []);
+  // Check scroll position to determine active dot and arrow button disabled states
+  const checkScrollLimits = () => {
+    if (!scrollRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
 
-  const maxIndex = Math.max(0, products.length - 1);
+    // Use a tolerance of 5px to account for subpixel rendering variations
+    setCanScrollLeft(scrollLeft > 5);
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 5);
 
-  const getMaxDrag = useCallback(() => {
-    if (!constraintsRef.current) return 0;
-    const containerWidth = constraintsRef.current.offsetWidth;
-    const totalWidth = products.length * (CARD_WIDTH + CARD_GAP) - CARD_GAP;
-    return Math.max(0, totalWidth - containerWidth);
-  }, [products.length]);
-
-  const scrollToIndex = useCallback((index: number) => {
-    const clamped = Math.max(0, Math.min(index, maxIndex));
-    setCurrentIndex(clamped);
-  }, [maxIndex]);
-
-  const prev = () => scrollToIndex(currentIndex - 1);
-  const next = () => scrollToIndex(currentIndex + 1);
-
-  // Keyboard navigation
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "ArrowLeft") { e.preventDefault(); prev(); }
-    if (e.key === "ArrowRight") { e.preventDefault(); next(); }
+    // Calculate active dot based on scroll position
+    const itemWidth = CARD_WIDTH + CARD_GAP;
+    const index = Math.round(scrollLeft / itemWidth);
+    setCurrentIndex(Math.max(0, Math.min(index, products.length - 1)));
   };
 
-  const xOffset = -currentIndex * (CARD_WIDTH + CARD_GAP);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    checkScrollLimits();
+
+    el.addEventListener("scroll", checkScrollLimits, { passive: true });
+    window.addEventListener("resize", checkScrollLimits);
+
+    // Extra check after initial load/mount rendering finishes
+    const timer = setTimeout(checkScrollLimits, 300);
+
+    return () => {
+      el.removeEventListener("scroll", checkScrollLimits);
+      window.removeEventListener("resize", checkScrollLimits);
+      clearTimeout(timer);
+    };
+  }, [products.length]);
+
+  const handlePrev = () => {
+    if (!scrollRef.current) return;
+    const itemWidth = CARD_WIDTH + CARD_GAP;
+    // Scroll left by 2 items (or 1 if on small screen)
+    const scrollAmount = scrollRef.current.clientWidth < 640 ? itemWidth : itemWidth * 2;
+    const targetScroll = Math.max(0, scrollRef.current.scrollLeft - scrollAmount);
+
+    scrollRef.current.scrollTo({
+      left: targetScroll,
+      behavior: "smooth",
+    });
+  };
+
+  const handleNext = () => {
+    if (!scrollRef.current) return;
+    const itemWidth = CARD_WIDTH + CARD_GAP;
+    // Scroll right by 2 items (or 1 if on small screen)
+    const scrollAmount = scrollRef.current.clientWidth < 640 ? itemWidth : itemWidth * 2;
+    const targetScroll = Math.min(
+      scrollRef.current.scrollWidth - scrollRef.current.clientWidth,
+      scrollRef.current.scrollLeft + scrollAmount
+    );
+
+    scrollRef.current.scrollTo({
+      left: targetScroll,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToCard = (index: number) => {
+    if (!scrollRef.current) return;
+    const itemWidth = CARD_WIDTH + CARD_GAP;
+    scrollRef.current.scrollTo({
+      left: index * itemWidth,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section
       aria-label={heading ?? "Product carousel"}
-      className="relative overflow-hidden group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onKeyDown={handleKeyDown}
+      className="relative overflow-visible group/carousel"
     >
       {heading && (
         <h2 className="font-display text-2xl md:text-3xl font-semibold text-[#1C1C1E] mb-8">
@@ -63,103 +101,63 @@ export default function ProductCarousel({ products, heading }: ProductCarouselPr
         </h2>
       )}
 
-      <div className="relative">
-        {/* Arrow: Previous */}
-        {!isTouchDevice && (
-          <AnimatePresence>
-            {isHovered && currentIndex > 0 && (
-              <motion.button
-                key="prev"
-                initial={{ opacity: 0, x: -8 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -8 }}
-                transition={{ duration: 0.2 }}
-                onClick={prev}
-                aria-label="Previous products"
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 w-11 h-11 rounded-full bg-white border border-[#E0DAD4] shadow-card flex items-center justify-center text-[#1C1C1E] hover:bg-[#B76E79] hover:text-white hover:border-[#B76E79] transition-colors duration-200"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </motion.button>
-            )}
-          </AnimatePresence>
-        )}
+      <div className="relative overflow-visible">
+        {/* Navigation Arrow: Previous */}
+        <button
+          onClick={handlePrev}
+          disabled={!canScrollLeft}
+          aria-label="Previous products"
+          className="absolute -left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/95 border border-[#E0DAD4] shadow-card flex items-center justify-center text-[#1C1C1E] hover:bg-[#B76E79] hover:text-white hover:border-[#B76E79] transition-all duration-300 disabled:opacity-0 disabled:pointer-events-none md:opacity-0 md:group-hover/carousel:opacity-100 hover:scale-105 active:scale-95 cursor-pointer -translate-x-2 md:translate-x-0"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
 
-        {/* Arrow: Next */}
-        {!isTouchDevice && (
-          <AnimatePresence>
-            {isHovered && currentIndex < maxIndex && (
-              <motion.button
-                key="next"
-                initial={{ opacity: 0, x: 8 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 8 }}
-                transition={{ duration: 0.2 }}
-                onClick={next}
-                aria-label="Next products"
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-20 w-11 h-11 rounded-full bg-white border border-[#E0DAD4] shadow-card flex items-center justify-center text-[#1C1C1E] hover:bg-[#B76E79] hover:text-white hover:border-[#B76E79] transition-colors duration-200"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </motion.button>
-            )}
-          </AnimatePresence>
-        )}
+        {/* Navigation Arrow: Next */}
+        <button
+          onClick={handleNext}
+          disabled={!canScrollRight}
+          aria-label="Next products"
+          className="absolute -right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/95 border border-[#E0DAD4] shadow-card flex items-center justify-center text-[#1C1C1E] hover:bg-[#B76E79] hover:text-white hover:border-[#B76E79] transition-all duration-300 disabled:opacity-0 disabled:pointer-events-none md:opacity-0 md:group-hover/carousel:opacity-100 hover:scale-105 active:scale-95 cursor-pointer translate-x-2 md:translate-x-0"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
 
-        {/* Drag container */}
-        <div ref={constraintsRef} className="overflow-hidden cursor-grab active:cursor-grabbing">
-          <motion.div
-            ref={trackRef}
-            drag="x"
-            dragConstraints={{
-              left: -getMaxDrag(),
-              right: 0,
-            }}
-            dragElastic={0.08}
-            animate={{ x: xOffset }}
-            transition={{ type: "spring", stiffness: 300, damping: 35 }}
-            onDragEnd={(_, info) => {
-              // Snap to nearest card on drag release
-              const velocity = info.velocity.x;
-              const offset = info.offset.x;
-              if (offset < -60 || velocity < -400) {
-                scrollToIndex(currentIndex + 1);
-              } else if (offset > 60 || velocity > 400) {
-                scrollToIndex(currentIndex - 1);
-              }
-            }}
-            className="flex"
-            style={{ gap: CARD_GAP, paddingBottom: "4px" }}
-            aria-live="polite"
-          >
-            {products.map((product, i) => (
-              <div
-                key={product.id}
-                style={{ width: CARD_WIDTH, flexShrink: 0 }}
-                aria-label={`Product ${i + 1} of ${products.length}: ${product.name}`}
-              >
-                <ProductCard product={product} />
-              </div>
-            ))}
-          </motion.div>
+        {/* Scrollable Track */}
+        <div
+          ref={scrollRef}
+          className="overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-5 pb-4 px-1 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          style={{ scrollPaddingLeft: "4px" }}
+        >
+          {products.map((product, i) => (
+            <div
+              key={product.id}
+              className="snap-start shrink-0"
+              style={{ width: `${CARD_WIDTH}px` }}
+              aria-label={`Product ${i + 1} of ${products.length}: ${product.name}`}
+            >
+              <ProductCard product={product} />
+            </div>
+          ))}
         </div>
 
-        {/* Dot indicators */}
+        {/* Dot Indicators */}
         {products.length > 1 && (
-          <div className="flex items-center justify-center gap-1.5 mt-6" role="tablist" aria-label="Carousel position">
+          <div className="flex items-center justify-center gap-2 mt-6" role="tablist" aria-label="Carousel position">
             {products.map((_, i) => (
               <button
                 key={i}
                 role="tab"
                 aria-selected={i === currentIndex}
                 aria-label={`Go to product ${i + 1}`}
-                onClick={() => scrollToIndex(i)}
-                className={`rounded-full transition-all duration-300 ${
+                onClick={() => scrollToCard(i)}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                   i === currentIndex
-                    ? "w-6 h-2 bg-[#B76E79]"
-                    : "w-2 h-2 bg-[#E0DAD4] hover:bg-[#B76E79]/50"
+                    ? "w-6 bg-[#B76E79]"
+                    : "w-2 bg-[#E0DAD4] hover:bg-[#B76E79]/50"
                 }`}
               />
             ))}
