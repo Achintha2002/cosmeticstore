@@ -17,6 +17,7 @@ export default function ProductCarousel({ products, heading }: ProductCarouselPr
   const [currentIndex, setCurrentIndex] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [maxIndex, setMaxIndex] = useState(products.length - 1);
 
   // Check scroll position to determine active dot and arrow button disabled states
   const checkScrollLimits = () => {
@@ -27,10 +28,14 @@ export default function ProductCarousel({ products, heading }: ProductCarouselPr
     setCanScrollLeft(scrollLeft > 5);
     setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 5);
 
-    // Calculate active dot based on scroll position
+    // Calculate max possible index and current active dot
     const itemWidth = CARD_WIDTH + CARD_GAP;
+    const maxScroll = scrollWidth - clientWidth;
+    const calculatedMaxIndex = Math.max(0, Math.round(maxScroll / itemWidth));
+    setMaxIndex(calculatedMaxIndex);
+
     const index = Math.round(scrollLeft / itemWidth);
-    setCurrentIndex(Math.max(0, Math.min(index, products.length - 1)));
+    setCurrentIndex(Math.max(0, Math.min(index, calculatedMaxIndex)));
   };
 
   useEffect(() => {
@@ -145,14 +150,14 @@ export default function ProductCarousel({ products, heading }: ProductCarouselPr
         </div>
 
         {/* Dot Indicators */}
-        {products.length > 1 && (
+        {maxIndex > 0 && (
           <div className="flex items-center justify-center gap-2 mt-6" role="tablist" aria-label="Carousel position">
-            {products.map((_, i) => (
+            {Array.from({ length: maxIndex + 1 }).map((_, i) => (
               <button
                 key={i}
                 role="tab"
                 aria-selected={i === currentIndex}
-                aria-label={`Go to product ${i + 1}`}
+                aria-label={`Go to page ${i + 1}`}
                 onClick={() => scrollToCard(i)}
                 className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
                   i === currentIndex
