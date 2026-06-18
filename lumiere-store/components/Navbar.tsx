@@ -43,27 +43,29 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Perfumes", href: "/category/perfumes" },
+    { label: "Decant", href: "/category/decant" },
     { label: "Cosmetics", href: "/category/cosmetics" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
 
-  const isHeroPage = pathname === "/";
+  const isHeroPage = pathname === "/" || pathname.startsWith("/category/") || pathname === "/about";
+  const isTransparent = isHeroPage && !scrolled && !mobileOpen;
 
   return (
     <>
       <header
-        className={`absolute top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled || !isHeroPage
-            ? "glass shadow-glass"
-            : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          !isTransparent ? "glass shadow-glass" : "bg-transparent nav-transparent"
         }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 md:h-20 flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
-            className="flex-shrink-0 font-display text-xl md:text-2xl font-bold tracking-[0.2em] text-[#1C1C1E] hover:text-[#B76E79] transition-colors duration-300"
+            className={`flex-shrink-0 font-display text-xl md:text-2xl font-bold tracking-[0.2em] transition-colors duration-300 ${
+              isTransparent ? "text-white hover:text-[#D4939C]" : "text-[#1C1C1E] hover:text-[#B76E79]"
+            }`}
             aria-label="LUMIÈRE — Home"
           >
             LUMIÈRE
@@ -78,16 +80,17 @@ export default function Navbar() {
                   className={`text-sm font-medium tracking-wider uppercase transition-colors duration-200 relative group ${
                     pathname.startsWith(link.href)
                       ? "text-[#B76E79]"
+                      : isTransparent
+                      ? "text-white hover:text-[#D4939C] drop-shadow-md"
                       : "text-[#1C1C1E] hover:text-[#B76E79]"
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute -bottom-1 left-0 h-px bg-[#B76E79] transition-all duration-300 ${
-                      pathname.startsWith(link.href)
+                    className={`absolute -bottom-1 left-0 h-px bg-[#B76E79] transition-all duration-300 ${pathname.startsWith(link.href)
                         ? "w-full"
                         : "w-0 group-hover:w-full"
-                    }`}
+                      }`}
                   />
                 </Link>
               </li>
@@ -102,7 +105,11 @@ export default function Navbar() {
               whileTap={{ scale: 0.92 }}
               onClick={() => setSearchOpen(true)}
               aria-label="Open search"
-              className="p-2 rounded-full text-[#1C1C1E] hover:text-[#B76E79] hover:bg-[#F0EDE8] transition-colors duration-200"
+              className={`p-2 rounded-full transition-colors duration-200 ${
+                isTransparent 
+                  ? "text-white hover:text-[#D4939C] hover:bg-white/10 drop-shadow-md" 
+                  : "text-[#1C1C1E] hover:text-[#B76E79] hover:bg-[#F0EDE8]"
+              }`}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24" aria-hidden="true">
                 <circle cx="11" cy="11" r="7" />
@@ -117,7 +124,11 @@ export default function Navbar() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.92 }}
                   aria-label="Account menu"
-                  className="p-2 rounded-full text-[#B76E79] hover:bg-[#F0EDE8] transition-colors duration-200"
+                  className={`p-2 rounded-full transition-colors duration-200 ${
+                    isTransparent 
+                      ? "text-[#B76E79] hover:bg-white/10" 
+                      : "text-[#B76E79] hover:bg-[#F0EDE8]"
+                  }`}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" strokeLinecap="round" strokeLinejoin="round" />
@@ -143,7 +154,11 @@ export default function Navbar() {
                 whileTap={{ scale: 0.92 }}
                 onClick={() => setLoginOpen(true)}
                 aria-label="Sign in"
-                className="p-2 rounded-full text-[#1C1C1E] hover:text-[#B76E79] hover:bg-[#F0EDE8] transition-colors duration-200"
+                className={`p-2 rounded-full transition-colors duration-200 ${
+                  isTransparent 
+                    ? "text-white hover:text-[#D4939C] hover:bg-white/10 drop-shadow-md" 
+                    : "text-[#1C1C1E] hover:text-[#B76E79] hover:bg-[#F0EDE8]"
+                }`}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" strokeLinecap="round" strokeLinejoin="round" />
@@ -157,7 +172,11 @@ export default function Navbar() {
               <Link
                 href="/cart"
                 aria-label={`Shopping cart, ${totalItems} item${totalItems !== 1 ? "s" : ""}`}
-                className="relative p-2 rounded-full text-[#1C1C1E] hover:text-[#B76E79] hover:bg-[#F0EDE8] transition-colors duration-200 inline-block"
+                className={`relative p-2 rounded-full transition-colors duration-200 flex items-center justify-center ${
+                  isTransparent 
+                    ? "text-white hover:text-[#D4939C] hover:bg-white/10 drop-shadow-md" 
+                    : "text-[#1C1C1E] hover:text-[#B76E79] hover:bg-[#F0EDE8]"
+                }`}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" strokeLinecap="round" strokeLinejoin="round" />
@@ -187,7 +206,7 @@ export default function Navbar() {
             <Link
               href="/cart"
               aria-label={`Cart, ${totalItems} items`}
-              className="relative p-2 text-[#1C1C1E]"
+              className={`relative p-2 ${isTransparent ? "text-white drop-shadow-md" : "text-[#1C1C1E]"}`}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" strokeLinecap="round" strokeLinejoin="round" />
@@ -204,7 +223,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen((v) => !v)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
-              className="p-2 text-[#1C1C1E]"
+              className={`p-2 ${isTransparent ? "text-white drop-shadow-md" : "text-[#1C1C1E]"}`}
             >
               <span className="sr-only">{mobileOpen ? "Close" : "Open"} navigation</span>
               <div className="w-5 h-4 flex flex-col justify-between">
@@ -233,11 +252,10 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-base font-medium tracking-wider uppercase py-1 transition-colors duration-200 ${
-                      pathname.startsWith(link.href)
+                    className={`text-base font-medium tracking-wider uppercase py-1 transition-colors duration-200 ${pathname.startsWith(link.href)
                         ? "text-[#B76E79]"
                         : "text-[#1C1C1E]"
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </Link>

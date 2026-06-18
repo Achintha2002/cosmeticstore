@@ -215,5 +215,109 @@
     "scentNotes": [],
     "ingredients": ["Aqua", "Rosa Damascena Flower Water", "Aloe Barbadensis Leaf Juice", "Glycerin", "Sodium Hyaluronate", "Panthenol"],
     "inStock": true
+  },
+  {
+    "id": "dec-001",
+    "name": "Velvet Oud Decant",
+    "category": "decant",
+    "price": 18,
+    "images": [
+      "/velvet_oud_decant.png"
+    ],
+    "description": "Experience the full depth of Velvet Oud in a 5ml travel vial. Smoky oud, dark rose, and warm amber — perfect for sampling before committing to a full bottle.",
+    "scentNotes": ["Oud", "Dark Rose", "Amber", "Sandalwood", "Musk"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Oud Extract", "Rosa Damascena Oil", "Ambroxan"],
+    "inStock": true
+  },
+  {
+    "id": "dec-002",
+    "name": "Blanc Iris Decant",
+    "category": "decant",
+    "price": 14,
+    "images": [
+      "/blanc_iris_decant.png"
+    ],
+    "description": "A 5ml sample of the powdery elegance of Blanc Iris — Florentine iris root, white peony, and cashmere musk in a sleek travel vial.",
+    "scentNotes": ["Iris Root", "White Peony", "Cashmere Musk", "Bergamot", "White Cedar"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Iris Pallida Root Extract", "Paeonia Officinalis Flower Oil"],
+    "inStock": true
+  },
+  {
+    "id": "dec-003",
+    "name": "Rose Noire Decant",
+    "category": "decant",
+    "price": 20,
+    "images": [
+      "/rose_noire_decant.png"
+    ],
+    "description": "Dare the darkness in a 5ml vial. Turkish rose absolute intertwines with black patchouli and vetiver. A sample made for the bold and unapologetic.",
+    "scentNotes": ["Turkish Rose Absolute", "Black Patchouli", "Vetiver", "Dark Plum", "Leather"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Rosa Damascena Flower Extract", "Pogostemon Cablin Leaf Oil"],
+    "inStock": true
+  },
+  {
+    "id": "dec-004",
+    "name": "Santal Lumière Decant",
+    "category": "decant",
+    "price": 16,
+    "images": [
+      "/santal_lumiere_decant.png"
+    ],
+    "description": "5ml of creamy Mysore sandalwood, vanilla bourbon, and smoked cardamom. The ultimate comfort fragrance in a pocket-sized vial.",
+    "scentNotes": ["Mysore Sandalwood", "Vanilla Bourbon", "Cardamom", "Tonka Bean", "Cedarwood"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Santalum Album Wood Oil", "Vanilla Planifolia Fruit Extract"],
+    "inStock": true
+  },
+  {
+    "id": "dec-005",
+    "name": "Aqua Neroli Decant",
+    "category": "decant",
+    "price": 12,
+    "images": [
+      "/aqua_neroli_decant.png"
+    ],
+    "description": "Sun-drenched neroli and Sicilian bergamot in a 5ml travel size. Light and uplifting — ideal for everyday wear and travel.",
+    "scentNotes": ["Neroli", "Sicilian Bergamot", "White Tea", "Sea Salt", "Ambergris"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Citrus Aurantium Amara Flower Oil", "Citrus Bergamia Peel Oil"],
+    "inStock": true
+  },
+  {
+    "id": "dec-006",
+    "name": "Mystère Boisé Decant",
+    "category": "decant",
+    "price": 17,
+    "images": [
+      "/mystere_boise_decant.png"
+    ],
+    "description": "The enigmatic woody chypre in a 5ml vial — oakmoss, labdanum, and smoked incense. A rare chance to sample this limited edition.",
+    "scentNotes": ["Oakmoss", "Labdanum", "Incense", "Grey Amber", "Violet Leaf"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Evernia Prunastri Extract", "Cistus Ladanifer Resin"],
+    "inStock": true
+  },
+  {
+    "id": "dec-007",
+    "name": "Fleur de Cassis Decant",
+    "category": "decant",
+    "price": 13,
+    "images": [
+      "/fleur_de_cassis_decant.png"
+    ],
+    "description": "Playful and refined — blackcurrant buds and magnolia in a 5ml sample vial. A modern floral that never overstays its welcome.",
+    "scentNotes": ["Blackcurrant Bud", "Magnolia", "White Musk", "Lychee", "Jasmine"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Ribes Nigrum Bud Extract", "Michelia Alba Flower Oil"],
+    "inStock": true
+  },
+  {
+    "id": "dec-008",
+    "name": "Amber Soleil Decant",
+    "category": "decant",
+    "price": 15,
+    "images": [
+      "/amber_soleil_decant.png"
+    ],
+    "description": "Golden amber, benzoin, and sun-warmed skin in a 5ml vial. Radiant and sensual — experience the full glory of Amber Soleil before purchasing.",
+    "scentNotes": ["Amber", "Benzoin", "Orange Blossom", "Vanilla", "Heliotrope"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Ambergris Tincture", "Styrax Benzoin Gum"],
+    "inStock": true
   }
 ]
