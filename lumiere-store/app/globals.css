@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ─── LUMIÈRE Design Tokens (Tailwind v4 @theme) ─── */
-@theme inline {
+@theme {
   --color-background: #FAF9F6;
   --color-surface: #F0EDE8;
   --color-surface-alt: #E8E4DE;
