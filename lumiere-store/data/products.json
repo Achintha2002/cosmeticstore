@@ -81,17 +81,15 @@
   },
   {
     "id": "perf-007",
-    "name": "Fleur de Cassis",
+    "name": "Afnan 9 AM Pour Femme",
     "category": "perfume",
-    "price": 138,
+    "price": 45,
     "images": [
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80",
-      "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=800&q=80",
-      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&q=80"
+      "/afnan_9am.png"
     ],
-    "description": "Blackcurrant buds and magnolia petals over a luminous white musk base. A modern floral that is both playful and refined.",
-    "scentNotes": ["Blackcurrant Bud", "Magnolia", "White Musk", "Lychee", "Jasmine"],
-    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Ribes Nigrum Bud Extract", "Michelia Alba Flower Oil", "Jasminum Officinale Flower Oil"],
+    "description": "Afnan 9 AM Pour Femme is a refreshing and elegant fragrance with a vibrant blend of fruity notes and soft floral undertones, perfect for daytime wear.",
+    "scentNotes": ["Mandarin", "Grapefruit", "Bergamot", "Raspberry", "Apple", "Musk", "Amber"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Limonene", "Linalool", "Citronellol"],
     "inStock": true
   },
   {
