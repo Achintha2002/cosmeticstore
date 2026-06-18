@@ -94,17 +94,15 @@
   },
   {
     "id": "perf-008",
-    "name": "Amber Soleil",
+    "name": "Dior Sauvage",
     "category": "perfume",
-    "price": 158,
+    "price": 145,
     "images": [
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800&q=80",
-      "https://images.unsplash.com/photo-1594913788267-e3a62a7fee87?w=800&q=80",
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80"
+      "/dior_sauvage.png"
     ],
-    "description": "Golden amber fused with sun-warmed skin, benzoin, and a whisper of orange blossom. Radiant, sensual, and utterly irresistible.",
-    "scentNotes": ["Amber", "Benzoin", "Orange Blossom", "Vanilla", "Heliotrope"],
-    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Ambergris Tincture", "Styrax Benzoin Gum", "Citrus Aurantium Amara Flower Oil"],
+    "description": "A radically fresh composition, Dior Sauvage is both raw and noble. Radiant top notes burst with the juicy freshness of Reggio di Calabria Bergamot.",
+    "scentNotes": ["Bergamot", "Pepper", "Amberwood", "Lavender", "Vetiver", "Patchouli"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Limonene", "Linalool", "Citronellol"],
     "inStock": true
   },
   {
@@ -297,15 +295,15 @@
   },
   {
     "id": "dec-008",
-    "name": "Amber Soleil Decant",
+    "name": "Dior Sauvage Decant",
     "category": "decant",
-    "price": 22,
+    "price": 18,
     "images": [
-      "/amber_soleil_decant.png"
+      "/dior_sauvage_decant.png"
     ],
-    "description": "A 5ml travel vial of Amber Soleil. Golden amber fused with sun-warmed skin, benzoin, and orange blossom.",
-    "scentNotes": ["Amber", "Benzoin", "Orange Blossom", "Vanilla", "Heliotrope"],
-    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Ambergris Tincture", "Styrax Benzoin Gum"],
+    "description": "A 5ml travel vial of Dior Sauvage. A radically fresh composition bursting with juicy bergamot.",
+    "scentNotes": ["Bergamot", "Pepper", "Amberwood", "Lavender", "Vetiver"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Limonene", "Linalool"],
     "inStock": true
   }
 ]
