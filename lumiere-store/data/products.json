@@ -53,17 +53,15 @@
   },
   {
     "id": "perf-005",
-    "name": "Aqua Neroli",
+    "name": "Afnan 9 PM",
     "category": "perfume",
-    "price": 125,
+    "price": 40,
     "images": [
-      "/sauvage-dior.jpg",
-      "https://images.unsplash.com/photo-1616949970965-96b48b38c4cb?w=800&q=80",
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80"
+      "/afnan_9pm.png"
     ],
-    "description": "Sun-drenched citrus meets the delicate blossom of neroli in this effortlessly fresh Mediterranean fragrance. Light, radiant, and uplifting for any occasion.",
-    "scentNotes": ["Neroli", "Sicilian Bergamot", "White Tea", "Sea Salt", "Ambergris"],
-    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Citrus Aurantium Amara Flower Oil", "Citrus Bergamia Peel Oil", "Camellia Sinensis Leaf Extract"],
+    "description": "Afnan 9 PM is a dynamic and energetic fragrance perfect for evening wear. It opens with fresh fruity notes and settles into a warm, sweet, and spicy base of vanilla and amber.",
+    "scentNotes": ["Apple", "Cinnamon", "Wild Lavender", "Orange Blossom", "Vanilla", "Tonka Bean", "Amber"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Linalool", "Limonene", "Coumarin"],
     "inStock": true
   },
   {
