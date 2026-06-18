@@ -1,62 +1,54 @@
 [
   {
     "id": "perf-001",
-    "name": "Velvet Oud",
+    "name": "Ramz Lattafa Silver",
     "category": "perfume",
-    "price": 189,
+    "price": 45,
     "images": [
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80",
-      "https://images.unsplash.com/photo-1594913788267-e3a62a7fee87?w=800&q=80",
-      "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=800&q=80"
+      "/ramz_lattafa_silver.png"
     ],
-    "description": "A deep, resinous oriental fragrance anchored by smoky oud, dark rose, and warm amber. An evening fragrance that leaves a trail of sophisticated mystery.",
-    "scentNotes": ["Oud", "Dark Rose", "Amber", "Sandalwood", "Musk"],
-    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Oud Extract", "Rosa Damascena Oil", "Ambroxan", "Santalum Album Oil"],
+    "description": "A captivating oriental fragrance with a blend of sweet, spicy, and woody notes, perfect for evening wear.",
+    "scentNotes": ["Pear", "Lavender", "Mint", "Cardamom", "Vanilla", "Amber"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Linalool", "Coumarin", "Limonene"],
     "inStock": true
   },
   {
     "id": "perf-002",
-    "name": "Blanc Iris",
+    "name": "Ramz Lattafa Gold",
     "category": "perfume",
-    "price": 145,
+    "price": 45,
     "images": [
-      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&q=80",
-      "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=800&q=80",
-      "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=800&q=80"
+      "/ramz_lattafa_gold.png"
     ],
-    "description": "A powdery floral built around Florentine iris root, white peony, and a gossamer musk. Clean, ethereal, and timeless.",
-    "scentNotes": ["Iris Root", "White Peony", "Cashmere Musk", "Bergamot", "White Cedar"],
-    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Iris Pallida Root Extract", "Paeonia Officinalis Flower Oil", "Cedrus Atlantica Bark Oil"],
+    "description": "A luxurious and warm fragrance featuring rich amber, sweet fruits, and soft floral notes for an elegant presence.",
+    "scentNotes": ["Apple", "Pineapple", "Jasmine", "Sandalwood", "Patchouli", "Musk"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Citronellol", "Geraniol", "Alpha-Isomethyl Ionone"],
     "inStock": true
   },
   {
     "id": "perf-003",
-    "name": "Rose Noire",
+    "name": "Vulcan Feu",
     "category": "perfume",
-    "price": 210,
+    "price": 85,
     "images": [
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800&q=80",
-      "https://images.unsplash.com/photo-1594913788267-e3a62a7fee87?w=800&q=80",
-      "https://images.unsplash.com/photo-1616949970965-96b48b38c4cb?w=800&q=80"
+      "/vulcan_feu.png"
     ],
-    "description": "Bold and seductive, this black rose fragrance intertwines Turkish rose absolute with dark patchouli and vetiver. A fragrance for the unapologetically confident.",
-    "scentNotes": ["Turkish Rose Absolute", "Black Patchouli", "Vetiver", "Dark Plum", "Leather"],
-    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Rosa Damascena Flower Extract", "Pogostemon Cablin Leaf Oil", "Vetiveria Zizanoides Root Oil"],
+    "description": "An explosive and passionate fragrance with fiery spices, deep woods, and a hint of smoky leather.",
+    "scentNotes": ["Black Pepper", "Cinnamon", "Leather", "Oud", "Incense"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Eugenol", "Cinnamal", "Farnesol"],
     "inStock": true
   },
   {
     "id": "perf-004",
-    "name": "Santal Lumière",
+    "name": "Azzaro The Most Wanted",
     "category": "perfume",
-    "price": 165,
+    "price": 120,
     "images": [
-      "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=800&q=80",
-      "https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=800&q=80",
-      "https://images.unsplash.com/photo-1594913788267-e3a62a7fee87?w=800&q=80"
+      "/azzaro_most_wanted.png"
     ],
-    "description": "Creamy Mysore sandalwood warmed by vanilla bourbon and a hint of smoked cardamom. The quintessential comfort fragrance — enveloping and serene.",
-    "scentNotes": ["Mysore Sandalwood", "Vanilla Bourbon", "Cardamom", "Tonka Bean", "Cedarwood"],
-    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Santalum Album Wood Oil", "Vanilla Planifolia Fruit Extract", "Elettaria Cardamomum Seed Oil"],
+    "description": "An intense and highly addictive fragrance for men, blending vibrant cardamom, irresistible toffee, and masculine amber wood.",
+    "scentNotes": ["Cardamom", "Toffee", "Amber Wood", "Bourbon Vanilla"],
+    "ingredients": ["Alcohol Denat.", "Aqua", "Parfum", "Coumarin", "Limonene", "Linalool", "Benzyl Salicylate"],
     "inStock": true
   },
   {
