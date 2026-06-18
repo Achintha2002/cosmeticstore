@@ -1,7 +1,7 @@
 import productsData from "@/data/products.json";
 import categoriesData from "@/data/categories.json";
 
-export type Category = "perfume" | "cosmetic";
+export type Category = "perfume" | "cosmetic" | "decant";
 
 export interface Product {
   id: string;
@@ -45,6 +45,8 @@ export function getProductsByCategory(slug: string): Product[] {
     cosmetics: "cosmetic",
     perfume: "perfume",
     cosmetic: "cosmetic",
+    decant: "decant",
+    decants: "decant",
   };
   const category = categoryMap[slug.toLowerCase()];
   if (!category) return [];

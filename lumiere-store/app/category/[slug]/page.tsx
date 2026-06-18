@@ -59,15 +59,20 @@ export default async function CategoryPage({ params, searchParams }: CategoryPag
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1E]/80 via-[#1C1C1E]/20 to-transparent" />
+        {/* Stronger overlay for better text contrast */}
+        <div className="absolute inset-0 bg-[#1C1C1E]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1E]/95 via-[#1C1C1E]/60 to-transparent" />
+        {/* Top gradient to ensure transparent navbar text is readable */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1C1C1E]/70 via-transparent to-transparent" />
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12 pt-20">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#B76E79] mb-2">
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#D4939C] mb-2 drop-shadow-md">
             LUMIÈRE Collection
           </p>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-3">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-white mb-3 drop-shadow-lg">
             {cat.label}
           </h1>
-          <p className="text-white/80 text-base max-w-lg">{cat.description}</p>
+          <p className="text-white/90 text-base max-w-lg drop-shadow-md font-medium">{cat.description}</p>
         </div>
       </section>
 

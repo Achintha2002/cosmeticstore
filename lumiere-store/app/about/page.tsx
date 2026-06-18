@@ -14,17 +14,22 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-[50vh] flex items-end overflow-hidden" aria-label="About hero">
         <Image
-          src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?w=1600&q=85"
+          src="/about_hero_banner.png"
           alt="LUMIÈRE brand imagery — luxury perfume bottles"
           fill
           priority
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FAF9F6]/95 via-[#FAF9F6]/40 to-transparent" />
+        {/* Stronger overlay for better text contrast */}
+        <div className="absolute inset-0 bg-[#1C1C1E]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1E]/95 via-[#1C1C1E]/60 to-transparent" />
+        {/* Top gradient to ensure transparent navbar text is readable */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1C1C1E]/70 via-transparent to-transparent" />
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12 pt-20">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#B76E79] mb-3">Our Story</p>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-[#1C1C1E]">About LUMIÈRE</h1>
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#D4939C] mb-3 drop-shadow-md">Our Story</p>
+          <h1 className="font-display text-5xl md:text-6xl font-bold text-white drop-shadow-lg">About LUMIÈRE</h1>
         </div>
       </section>
 
